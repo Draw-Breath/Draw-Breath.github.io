@@ -1,0 +1,17 @@
+{
+  "checkedAt": "2026-09-08T12:08:53.822Z",
+  "checks": [
+    "All research images load",
+    "All local links and assets return HTTP 200, including PDF",
+    "All six figure viewers open, close with Escape, and restore page scrolling",
+    "Figure navigation wraps in both directions",
+    "State tabs, unchanged Observe sidebar, cancellation, fade completion, re-entry, and keyboard controls work",
+    "Abstract disclosure and citation clipboard copy work",
+    "No horizontal overflow at widths 1440, 1024, 768, 760, 390, 320",
+    "Mobile menu opens and closes after navigation",
+    "Reduced-motion mode keeps content visible and the demo functional",
+    "Research content and PDF links remain available without JavaScript",
+    "No browser JavaScript errors or HTTP failures"
+  ],
+  "errors": []
+}

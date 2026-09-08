@@ -1,0 +1,7 @@
+{
+  "name": "drawbreath-paper-site",
+  "version": "1.0.0",
+  "private": true,
+  "description": "DrawBreath research project page — Knowing When to Do Less",
+  "scripts": { "start": "node tools/serve.cjs" }
+}
