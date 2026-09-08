@@ -17,7 +17,9 @@ FIGURES = {
 }
 tiles = []
 for stem, name in FIGURES.items():
-    doc = pdfium.PdfDocument(SOURCE / 'figures' / (stem + '.pdf'))
+    replacement = ROOT / 'assets' / 'figures' / (name + '.pdf')
+    figure_path = replacement if replacement.exists() else SOURCE / 'figures' / (stem + '.pdf')
+    doc = pdfium.PdfDocument(figure_path)
     page = doc[0]
     im = page.render(scale=2600 / page.get_width()).to_pil().convert('RGB')
     im.save(OUT / (name + '.webp'), quality=92, method=6)
@@ -50,9 +52,9 @@ def crop_panel(source, box, name):
 
 for name, box in {
     'drawing-seed': (474, 124, 571, 220),
-    'drawing-butterfly': (1709, 126, 1802, 220),
     'drawing-character': (1848, 478, 1940, 571),
     'drawing-clock': (1845, 810, 1940, 904),
 }.items():
     crop_panel('results5.3.2', box, name)
 crop_panel('drawbreath01', (171, 55, 887, 591), 'study-session')
+# drawing-butterfly.jpg is a user-supplied replacement; retain it unchanged.
