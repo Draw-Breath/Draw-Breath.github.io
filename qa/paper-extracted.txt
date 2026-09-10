@@ -53,47 +53,37 @@
 Knowing When to Do Less: Adaptive AI Withdrawal in Children’s Creative
 Drawing
 ANONYMOUS AUTHOR(S)
-Task Context Adaptive Participation Over the Creative Process
-Children create an original drawing
-by creatively extending a provided
-shape, which may be abstract or
-concrete.
-AI should not be continuously
-active. It should step back when the
-child can continue independently, and remain ready to be called back
-when the child needs help again.
-Time 2min
-2 3 4 5 Child explores
-ideas
-AI supports
-child drawing
-Child works
-independently
-Child makes
-steady progress
-Child re-engages
-for help
-PRE-ACCESS STAY OBSERVE WITHDRAW RE-ENTER
-?
-What kind of background
-should I add?
-Key Idea
-1 15min
-Continuous Presence Premature Withdrawal
-Steps back before the child finds
-their footing and leaves unresolved
-needs without suf icient support. Why
-Stays after the child has found their
-stride and continues to occupy
-attention and creative decision space.
-Fig. 1. DrawBreath regulates AI participation during an Open-ended Creative Drawing Continuation task. As a child develops a
-drawing from a provided shape, the system produces internal Stay, Observe, and Withdraw judgments; only an executable Withdraw
-judgment changes the interface, through a reversible fade. The design examines the tension between withdrawing before a support
-need is resolved and remaining salient after independent creation has resumed.
 AI can support children’s creative work, but its continued presence may outlast the need for help. We investigate adaptive withdrawal
 through DrawBreath, a drawing system that uses canvas activity and interaction history to determine when to stay present, observe,
 or withdraw, with interruptible fading and child-initiated re-entry. In a single-condition study, 65 sixth-grade children completed
 an open-ended drawing continuation task. We analyzed participation judgments, interaction logs, and post-task evaluations. Stable
+drawing followed 80% of completed withdrawals, and children generally reported being able to continue drawing after withdrawal,
+suggesting that withdrawal often occurred at moments compatible with continued independent creation. Illustrative trajectories
+situated withdrawal within ongoing elaboration, revision, and later reorientation, sometimes followed by renewed help-seeking. These
+findings frame withdrawal as a reversible adjustment within creation and inform the design of AI support that can step back while
+remaining accessible.
+CCS Concepts: • Human-centered computing → Human computer interaction (HCI); HCI theory, concepts and models; Interactive
+systems and tools.
+Additional Key Words and Phrases: adaptive withdrawal, human–AI co-creation, mixed-initiative interaction, AI participation,
+children’s creativity, creative drawing, generative AI
+ACM Reference Format:
+Anonymous Author(s). 2027. Knowing When to Do Less: Adaptive AI Withdrawal in Children’s Creative Drawing. In Proceedings of CHI
+Conference on Human Factors in Computing Systems (CHI ’27). ACM, New York, NY, USA, 36 pages. https://doi.org/XXXXXXX.XXXXXXX
+1 Introduction
+Creative drawing gives children a way to develop and communicate ideas through visual marks [21]. As a drawing
+takes shape, children can explore an interpretation, revise it, and discover possibilities they had not initially imagined.
+AI tools can contribute to this process by helping children generate ideas, elaborate visual stories, and work through
+difficulties in creative projects [20, 23, 45, 71]. Supporting creation also means leaving children room to develop their
+own direction [25, 56, 60].
+A child’s need for support can change before the drawing is finished. A suggestion may help establish a direction,
+after which the child can continue independently; later revision may create a reason to seek help again. Scaffolding
+research emphasizes adjusting support to learners’ changing needs and gradually transferring responsibility to them
+[50, 55, 63]. For an AI assistant, this raises a practical tension: stepping back too soon can remove advice that a child still
+needs, while remaining visible can keep assistance in the foreground after the child has moved on. The same question
+arises when a child makes progress without requesting help at all. Designing AI participation therefore involves deciding
+how long its presence remains useful, both during and between support exchanges.
+Research on the timing of AI assistance provides a starting point. Studies of LLM access in writing ideation and
+critical thinking show that when assistance becomes available can shape its effects, with outcomes depending on the
 Permission to make digital or hard copies of all or part of this work for personal or classroom use is granted without fee provided that copies are not
 made or distributed for profit or commercial advantage and that copies bear this notice and the full citation on the first page. Copyrights for components
 of this work owned by others than the author(s) must be honored. Abstracting with credit is permitted. To copy otherwise, or republish, to post on
@@ -153,33 +143,43 @@ Manuscript submitted to ACM 1
 103
 104
 2 Anon.
-drawing followed 80% of completed withdrawals, and children generally reported being able to continue drawing after withdrawal,
-suggesting that withdrawal often occurred at moments compatible with continued independent creation. Illustrative trajectories
-situated withdrawal within ongoing elaboration, revision, and later reorientation, sometimes followed by renewed help-seeking. These
-findings frame withdrawal as a reversible adjustment within creation and inform the design of AI support that can step back while
-remaining accessible. Code, data, and study materials are available at https://draw-breath.github.io/.
-CCS Concepts: • Human-centered computing → Human computer interaction (HCI); HCI theory, concepts and models; Interactive
-systems and tools.
-Additional Key Words and Phrases: adaptive withdrawal, human–AI co-creation, mixed-initiative interaction, AI participation,
-children’s creativity, creative drawing, generative AI
-ACM Reference Format:
-Anonymous Author(s). 2027. Knowing When to Do Less: Adaptive AI Withdrawal in Children’s Creative Drawing. In Proceedings of CHI
-Conference on Human Factors in Computing Systems (CHI ’27). ACM, New York, NY, USA, 36 pages. https://doi.org/XXXXXXX.XXXXXXX
-1 Introduction
-Creative drawing gives children a way to develop and communicate ideas through visual marks [21]. As a drawing
-takes shape, children can explore an interpretation, revise it, and discover possibilities they had not initially imagined.
-AI tools can contribute to this process by helping children generate ideas, elaborate visual stories, and work through
-difficulties in creative projects [20, 23, 45, 71]. Supporting creation also means leaving children room to develop their
-own direction [25, 56, 60].
-A child’s need for support can change before the drawing is finished. A suggestion may help establish a direction,
-after which the child can continue independently; later revision may create a reason to seek help again. Scaffolding
-research emphasizes adjusting support to learners’ changing needs and gradually transferring responsibility to them
-[50, 55, 63]. For an AI assistant, this raises a practical tension: stepping back too soon can remove advice that a child still
-needs, while remaining visible can keep assistance in the foreground after the child has moved on. The same question
-arises when a child makes progress without requesting help at all. Designing AI participation therefore involves deciding
-how long its presence remains useful, both during and between support exchanges.
-Research on the timing of AI assistance provides a starting point. Studies of LLM access in writing ideation and
-critical thinking show that when assistance becomes available can shape its effects, with outcomes depending on the
+Task Context Adaptive Participation Over the Creative Process
+Children create an original drawing
+by creatively extending a provided
+shape, which may be abstract or
+concrete.
+AI should not be continuously
+active. It should step back when the
+child can continue independently, and remain ready to be called back
+when the child needs help again.
+Time 2min
+2 3 4 5 Child explores
+ideas
+AI supports
+child drawing
+Child works
+independently
+Child makes
+steady progress
+Child re-engages
+for help
+PRE-ACCESS STAY OBSERVE WITHDRAW RE-ENTER
+?
+What kind of background
+should I add?
+Key Idea
+1 15min
+Continuous Presence Premature Withdrawal
+Steps back before the child finds
+their footing and leaves unresolved
+needs without suf icient support. Why
+Stays after the child has found their
+stride and continues to occupy
+attention and creative decision space.
+Fig. 1. DrawBreath regulates AI participation during an Open-ended Creative Drawing Continuation task. As a child develops a
+drawing from a provided shape, the system produces internal Stay, Observe, and Withdraw judgments; only an executable Withdraw
+judgment changes the interface, through a reversible fade. The design examines the tension between withdrawing before a support
+need is resolved and remaining salient after independent creation has resumed.
 surrounding task and time available [54, 72]. Proactive systems also use ongoing activity to decide when to offer help,
 while confronting trade-offs between assistance and disruption [51]. These studies motivate adapting participation
 to the user’s process, but leave open how an assistant should decide to recede from view once access has begun. In

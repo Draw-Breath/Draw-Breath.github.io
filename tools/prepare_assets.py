@@ -33,8 +33,11 @@ sheet = Image.new('RGB', (1640, 1740), 'white')
 for i, tile in enumerate(tiles):
     sheet.paste(tile, ((i%2)*820, (i//2)*580))
 sheet.save(ROOT / 'qa' / 'source-contact-sheet.jpg')
-paper = next(ROOT.parent.glob('Knowing*.pdf'))
-shutil.copy2(paper, ROOT / 'assets' / 'paper' / 'drawbreath-paper.pdf')
+# The website's PDF is the current manuscript. Only seed it from the original
+# materials when absent, so regenerating figures cannot undo a paper update.
+paper = ROOT / 'assets' / 'paper' / 'drawbreath-paper.pdf'
+if not paper.exists():
+    shutil.copy2(next(ROOT.parent.glob('Knowing*.pdf')), paper)
 doc = pdfium.PdfDocument(paper)
 doc[0].render(scale=1.5).to_pil().save(ROOT / 'qa' / 'paper-first-page.png')
 text = '\n'.join(doc[i].get_textpage().get_text_range() for i in range(len(doc)))
